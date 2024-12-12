@@ -1,0 +1,804 @@
+/*Topo da seção*/
+
+.compras-top { 
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid black;
+    gap: 10px;
+}
+
+.compras-top h1  {
+    font-size: 25px;
+    font-weight: 600;   
+}
+
+.compras-top a {
+    font-size: 25px;
+    color: black;
+}
+.compras-top button {
+    border: none;
+    background-color: transparent;
+}
+#icons-compras {
+    background-color: #dc767d;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#icons-compras a {
+    text-align: center;
+    width: 50px;
+    font-size: 25px;
+    color: black;
+}
+
+#icons-compras a:hover{
+    border-bottom: 4px solid #e9a209;
+   
+}
+
+.cardapio-compras {
+    margin-bottom: 10%;
+}
+
+.content-compras {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    background-color: #f5a0aa;
+}
+
+.content-compras:last-child {
+    margin-bottom: 100px;
+}
+
+.content-compras h1 {
+    font-size: 20px;
+    margin-left: 35px;
+}
+
+.dishes-compras {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    gap: 25px;
+    
+}
+
+.dishes-compras:last-child {
+    margin-left: 35px;
+}
+
+.dish-compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 14px 10px rgba(0, 0, 0, 0.342);
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    width: 150px;
+    height: 200px; 
+}
+
+.dish-compra:hover{
+    background-color: #ffffffbe;
+    box-shadow: 0px 0px 10px 4px black;
+    transform: scale(1.03);
+    transition: 0.5s ease;
+}
+
+.dish-compra h2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 12px;
+}
+
+#titulos_g {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+#gramas {
+    font-weight: 500;
+}
+.dish-compra p {
+    width: 90%;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background-color: var(--color-primary-6);
+}
+.dish-compra span {
+    font-style: oblique;
+    font-weight: 200;
+    color: black;
+}
+
+.dish-compra img {
+    width: 85%;
+    height: 60%;
+    border-radius: 30px;
+    padding: 10px;
+    object-fit: cover;
+
+}
+
+#branco {
+    object-fit: cover;
+}
+
+#img-compra:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+#button_compras {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+   
+}
+
+.button-compra {
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 100%;
+    background-color: rgb(231, 240, 240); 
+    margin-right: 20px; 
+}
+
+#button_compras a {
+    color: black;
+}
+
+.button-compra:hover {
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.445);
+    transform: scale(1.03);
+    transition: 1s;
+}
+
+#box_button_compras {
+    text-align: center;
+    
+}
+  
+/*Produto Aberto*/
+
+.produto-aberto {
+    display: none;
+    flex-direction: column;
+    margin-bottom: 120px;
+}
+.conteudo-produto {
+    padding: 20px 0px;
+    margin-top: 25px;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+
+    gap: 30px;
+}
+.contexo-produto {
+    margin-left: 40px ;
+    width: 60%;
+    width: 100%;
+    text-align: justify;
+}
+.contexo-produto h1 {
+    font-size: 2rem;
+}
+
+.preços-subtitle span {
+    color: #e27a7ab9;
+
+}
+
+#produto_gramas {
+    font-size: 20px;
+
+}
+
+.contexo-produto p {
+    font-size: 25px;
+}
+.img-produto-conteiner {  
+    width: 40%;
+    height: 450px;
+    
+}
+
+.img-produto-conteiner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px 5px black;
+    margin-left: 30px;
+}
+
+.complemento-produto { 
+    display: flex;
+    flex-direction: column;  
+   
+}
+
+.complemento-produto h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.complemento-brigadeiro {
+    display: flex;
+    width: 100%;
+    height: 90px;
+    margin-bottom: 20px;
+    background-color: var(--color-primary-7);
+
+}
+
+.conteudo-complemento {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 10%;   
+    
+}
+
+.comp img {
+    height: 100%;
+    width: 100px;
+    border-radius: 100%;
+    
+}
+
+.comp {
+    width: 250px;
+ 
+    height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+   
+}
+.conteudo-complemento p {
+    font-size: 25px;
+    font-weight: 500;
+    
+    
+}
+.button-produto {
+    width: 288px;
+    text-align: center;
+   
+  
+}
+
+.buttom-adicionar-complemento {
+    background-color: #73eb63;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 100%;
+}
+
+.buttom-adicionar-complemento a {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.finalizar-compra {
+    position: relative;
+    display: flex;
+    margin-top: 25px;      
+}
+
+.buttons-adicionar {
+    
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+   
+    
+}
+
+.buttons-adicionar p {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+#plus, #less {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 100%;
+    background-color: tr;
+    
+}
+
+#plus a {
+    color: black;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+#less a {
+    color: black;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.valor-finalizar {
+    background-color: var(--color-primary-9);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 30px;
+    overflow: hidden;  
+}
+
+.avançar {
+    height: 100%;
+    width: 150px;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.valor-finalizar p {
+    font-size: 1.5rem;
+}
+
+.close-button {
+
+    background-color: #ff5c5c;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #ff3b3b;
+}
+
+.hidden {
+    display: none;
+}
+
+.content-compras-mobile {
+    display: none; /* Inicialmente oculta */
+}
+
+@media (max-width: 1280px) {
+    .dish-compra {
+        min-width: 100px;
+        min-height: 100px; 
+    }
+
+}
+
+@media (max-width: 900px) {
+    .cardapio-compras {
+        margin-bottom: 15%;
+    }
+    .content-compras {
+       overflow-x: auto;
+    }
+    .dish-compra {
+        min-width: 150px;
+        min-height: 200px; 
+
+    }
+    .dish-compra:last-child {
+        margin-right: 50px;
+    }
+
+    .compras {
+        margin: 0;
+    }
+
+    .produto-aberto {
+        display: none;
+        flex-direction: column;
+        
+    }
+
+
+    .conteudo-produto {
+        padding: 0px 0px;
+        margin-top: 0px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+    }
+    .img-produto-conteiner {
+        width: 40%;
+        height: 380px;   
+        margin-bottom: 0;
+        
+    }
+    
+    .img-produto-conteiner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0px 0px 20px 20px;
+        box-shadow: 0px 5px 10px 0px black;
+        margin-left: 0px;
+    }
+    .contexo-produto h1 {
+        font-size: 25px;
+        margin-top: 15px;
+    }
+    .contexo-produto h2 {
+        font-size: 18px;
+        margin-top: 0px;
+    }
+    .contexo-produto {
+        margin-top: 0px;
+        margin-left: 20px ;
+    }
+    .contexo-produto p {
+        font-size: 16px;
+    }
+    .preços-subtitle span {
+        font-size: 14px;
+        color: #e27a7ab9;
+    }
+    #produto_gramas {
+    font-size: 14px;
+    }
+
+    .complemento-produto h1 {
+        font-size: 25px;
+    }
+    .conteudo-complemento {
+        margin: 0 2%;  
+    }
+    .complemento-brigadeiro {
+        height: 80px;
+    }
+    .comp img {
+        height: 100%;
+        width: 60px;
+        border-radius: 100%;
+    }
+    .comp {
+        padding: 15px;
+        height: 60px;
+        gap: 10px;
+    }
+    .comp h2 {
+        font-size: 14px;
+    }
+
+    .conteudo-complemento p {
+        width: 200px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;  
+    }
+    .buttom-adicionar-complemento {
+        width: 25px;
+        height: 25px;
+    }
+    .finalizar-compra {
+        position: relative;
+        display: flex;
+        margin-top: 0px;
+        
+    }
+
+    .buttons-adicionar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .buttons-adicionar p {
+        display: flex;
+        align-items: normal;
+        font-size: 1.2rem;
+    }
+    .valor-finalizar {
+        width: 100%;
+        margin-left: 20px;  
+    }
+    .avançar {
+        height: 100%;
+        width: 65%;
+        border: none;
+        text-align: left;
+        margin-left: 8px;
+
+    }
+    
+    .valor-finalizar p {
+        font-size: 18px;
+    }
+
+ 
+
+    
+}
+@media (max-width: 600px) {
+    .cardapio-compras {
+        margin-bottom: 20%;
+    }
+
+    .content-compras {
+       overflow-x: auto;
+    }
+    .dish-compra {
+        min-width: 120px;
+        min-height: 120px; 
+    }
+    .dish-compra p {
+        width: 90%;
+        font-size: 12px;
+        border-radius: 5px;   
+        margin-top: auto;
+        margin-bottom: 5px;
+    }
+    .dish-compra h2 {
+        font-size: 12px;
+        margin-top: 10px;
+        
+    }
+    .dishes-compras:last-child {
+        margin-left: 15px;
+    }
+    .dish-compra img {
+        width: 85%;
+        height: 50%;
+        border-radius: 30px;
+        padding: 10px;
+        object-fit: cover;
+    
+    }
+
+    .compras {
+        margin: 0;
+    }
+
+    .produto-aberto {
+        display: none;
+        flex-direction: column;
+        margin-bottom: 20%;
+    }
+
+
+    .conteudo-produto {
+        padding: 0px 0px;
+        margin-top: 0px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .img-produto-conteiner {
+        width: 100%;
+        height: 220px;   
+        margin-bottom: 0;
+    }
+    
+    .img-produto-conteiner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0px 0px 20px 20px;
+        box-shadow: 0px 5px 10px 0px black;
+        margin-left: 0px;
+    }
+    .contexo-produto {
+        margin-top: 0px;
+        margin-left: 0px ;
+        
+    }
+
+    .contexo-produto h1 {
+        font-size: 20px;
+        margin-top: 15px;
+   
+    }
+    .contexo-produto h2 {
+        font-size: 15px;
+        margin-top: 0px;
+    }
+
+    .contexo-produto p {
+        font-size: 14px;
+    }
+    .preços-subtitle span {
+        font-size: 12px;
+        color: #e27a7ab9;
+    }
+    #produto_gramas {
+    font-size: 12px;
+    }
+
+    .complemento-produto h1 {
+        font-size: 20px;
+    }
+    .conteudo-complemento {
+        margin: 0 2%;  
+    }
+    .complemento-brigadeiro {
+        height: 60px;
+    }
+    .comp img {
+        height: 100%;
+        width: 40px;
+        border-radius: 100%;
+    }
+    .comp {
+        padding: 15px;
+        height: 40px;
+        gap: 10px;
+    }
+    .comp h2 {
+        font-size: 12px;
+    }
+
+    .conteudo-complemento p {
+        width: 150px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 600;  
+    }
+    .buttom-adicionar-complemento {
+        width: 25px;
+        height: 25px;
+    }
+    .finalizar-compra {
+        position: relative;
+        display: flex;
+        margin-top: 0px;
+        
+    }
+
+    .buttons-adicionar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 18px;
+    }
+    #plus, #less {
+        width: 25px;
+        height: 25px;    
+    }
+    .buttons-adicionar p {
+        display: flex;
+        align-items: normal;
+        font-size: 1rem;
+    }
+    .valor-finalizar {
+        width: 100%;
+        margin-left: 10px;  
+    }
+    .avançar {
+        height: 100%;
+        width: 150px;
+        border: none;
+        text-align: left;
+        margin-left: 8px;
+
+    }
+    
+    .valor-finalizar p {
+        font-size: 15px;
+    }
+
+
+    /*Mobile cardapio*/
+    .content-compras-mobile {
+        display: none;
+    }
+    .content-compras-mobile {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
+        background-color: #f5a0aa;
+    }
+    .dishes-compras-mobile {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        gap: 15px;
+        
+    }
+    .dishes-compras-mobile:last-child {
+        margin-left: 25px;
+    }
+    .dish-compra-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 14px 10px rgba(0, 0, 0, 0.342);
+        background-color: rgb(255, 255, 255);
+        overflow: hidden;
+        width: 100px;
+        height: 120px; 
+    }
+    .dish-compra-mobile:hover{
+        background-color: #ffffffbe;
+        box-shadow: 0px 0px 10px 4px black;
+        transform: scale(1.03);
+        transition: 0.5s ease;
+    }
+    
+    .dish-compra-mobile h2 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 10px;
+    }
+    
+    #gramas-mobile {
+        display: none;
+    }
+    .dish-compra-mobile p {
+        width: 90%;
+        text-align: center;
+        font-size: 10px;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        background-color: var(--color-primary-6);
+        font-weight: 700;
+    }
+    .dish-compra-mobile span {
+        font-style: oblique;
+        font-weight: 200;
+        color: rgb(0, 0, 0);
+    }
+    
+    .dish-compra-mobile img {
+        width: 85%;
+        height: 60%;
+        border-radius: 18px;
+        padding: 7px;
+        object-fit: cover;
+    }
+    
+    #branco {
+        object-fit: cover;
+    }
+    
+    #img-compra:hover{
+        transform: scale(1.05);
+        transition: 1s;
+    }
+
+
+
+ 
+    
+
+}

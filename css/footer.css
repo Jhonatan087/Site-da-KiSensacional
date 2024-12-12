@@ -1,0 +1,74 @@
+/*Estilização do Rodapé*/
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f5a0aa;
+    text-align: center;
+    z-index: 2000;
+    margin-bottom: 0;
+}
+
+footer img {
+    height: 100%;
+}
+
+/*Icones do Rodapé*/
+.social-media-buttons {
+    display: flex;
+    justify-content: space-between; /*Espaçamento automatico entre os icones*/ 
+    border: none; 
+    padding: 8px;
+}
+
+/*Conteiner dos itens*/
+#footer_items {
+    margin: 0 8%;
+    
+}
+
+.social-media-buttons button {
+    background-color: transparent;
+    border: none;
+}
+
+/*Estilo dos icons*/
+.social-media-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 40px;
+    padding: 5px;
+    background-color:aliceblue;
+    font-size: 2.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--color-neutral-1);;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow .3s ease;
+    border: none;
+}
+
+@media (max-width: 900px) {
+    .social-media-buttons a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        background-color:aliceblue;
+        font-size: 1.5rem;
+        border-radius: 10px 10px 0px 0px;
+        text-decoration: none;
+        color: var(--color-neutral-1);;
+        box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+        transition: box-shadow .3s ease;
+    }
+
+
+    
+    
+}

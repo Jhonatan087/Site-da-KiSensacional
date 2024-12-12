@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Estilização geral*/
+* {
+    font-family: 'poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+
+}
+
+:root {
+    --color-primary-1: #fff9ea;
+    --color-primary-2: #ffe8b4;
+    --color-primary-3: #f8d477;
+    --color-primary-4: #ffe100;
+    --color-primary-5: #ffcb45; 
+    --color-primary-6: #e9a209;
+    --color-primary-7: #f5a0aa;
+    --color-primary-8: #5c2415;
+    --color-primary-9: #dc767d;
+
+    --color-neutral-0: #fff;
+    --color-neutral-1: #1d1d1d;
+}
+
+body {
+    background-color: #ffe6e9;
+    
+}
+
+section {
+    margin: 0 8%;
+    display: none;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+
+
+}
+
+.active {
+  display: block;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+.cont {
+    height: 100%;
+    background-color: #28a745;
+    width: 0%; /* Inicialmente a barra está vazia */
+    border-radius: 10px;
+}
+
+.contagem p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.fiel-button button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fiel-button button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+/* Estilos para o histórico de compras */
+.pedido-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+}
+
+.pedido-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pedido-imagem {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.pedido-detalhes {
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+.pedido-item-detalhes {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.pedido-item-imagem {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.ver-pedido-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.ver-pedido-btn:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para o carrinho de compras */
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cart-item-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.cart-item-details {
+    padding-left: 10px;
+}
+
+#cart-total {
+    font-weight: bold;
+    color: #333;
+}
+
+
+#cupom-fidelidade {
+    display: none;
+}
+
+.cf {
+    background-color: #89b6d1;
+    overflow: hidden;
+    height: 100px;
+   
+}

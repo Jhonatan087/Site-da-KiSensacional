@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/testimonials.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/compras.css">
+    <link rel="stylesheet" href="./css/beneficios.css">
+    <link rel="stylesheet" href="./css/perfil.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <title>Site da KiSensacional</title>
+
+</head>
+
+<body>
+
+    <header>
+        <!--Rodapé de Cima-->
+        <nav class="navbr">
+            <div id="nav_container">
+                <div class="nav-logo">
+                    <img src="./imagens/Logomarca/logotipos.png" alt="Logo">
+                </div>
+                <h1 id="h1">KiSensacional</h1>
+                <div class="nav-itens">
+                    <!-- Carrinho de Compras -->
+                    <a href="#" id="cart-icon">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                    <a href="#" id="bars">
+                        <i id="menu_icon" class="fa-solid fa-bars"></i>
+                    </a>
+                </div>
+                <!-- Lista de Perfil (inicialmente oculta) -->
+
+            </div>
+            <!-- Conteúdo do Rodapé -->
+        </nav>
+
+        <buttom id="open_btn">
+
+        </buttom>
+
+        <!-- Barra Lateral -->
+        <nav id="sidebar">
+            <div id="sidebar_content">
+                <!-- Ícone de Fechar (X) com a palavra "Fechar" -->
+                <div id="close_icon_container">
+                    <span id="close_text">Fechar</span>
+                    <i id="close_icon" class="fa-solid fa-times"></i>
+                </div>
+
+                <div id="user">
+                    <img src="./avatar.jpg" alt="" id="user_avatar">
+                    <p id="user_infos">
+                        <span class="item-description">
+                            Fulano de Tal
+                        </span>
+                        <span class="item-description">
+                            Lorem Ipsum
+                        </span>
+                    </p>
+                </div>
+
+                <div class="lista-container">
+                    <ul class="side_items">
+                        <li class="side-item">
+                            <button class="home-btn-lista">
+                                <a href="#">
+                                    <i class="fa-solid fa-house"></i>
+                                    <span class="item-description">Home</span>
+                                </a>
+                            </button>
+
+                        </li>
+
+                        <li class="side-item">
+                            <button class="perfil-btn-lista">
+                                <a href="#">
+                                    <i class="fa-solid fa-store"></i>
+                                    <span class="item-description">Perfil da loja</span>
+                                </a>
+                            </button>
+                        </li>
+
+                        <li class="side-item">
+                            <button class="beneficio-btn-lista">
+                                <a href="#">
+                                    <i class="fa-solid fa-bell"></i>
+                                    <span class="item-description">Benefícios</span>
+                                </a>
+                            </button>
+
+                        </li>
+
+                        <li class="side-item">
+                            <button class="produtos-btn-lista">
+                                <a href="#">
+                                    <i class="fa-solid fa-box"></i>
+                                    <span class="item-description">Produtos</span>
+                                </a>
+                            </button>
+                        </li>
+
+                        <li class="side-item">
+                            <button class="feed-btn-lista">
+                                <a href="#">
+                                    <i class="fa-solid fa-comment"></i>
+                                    <span class="item-description">Feedbacks</span>
+                                </a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="logout">
+                <button id="logout_btn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span class="item-description">Logout</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Carrinho de compras -->
+        <section id="cart" class="cart"> <!-- Carrinho oculto por padrão -->
+            <div class="cart-container">
+
+                <button id="close-cart" class="close-cart-button">&times;</button> <!-- Botão para fechar o carrinho -->
+
+                <h2>Seu Carrinho</h2>
+                <p><span id="cart-quantidade">0</span></p>
+
+                <div id="cart-items">
+                    <!-- Itens do carrinho serão inseridos aqui -->
+                    <div class="cart-item-content">
+                        <img src=" " alt="" class="cart-item-img">
+                        <div class="cart-item-details">
+                            <p><strong><!--Nome do produto--></strong><!--Complemento--></p>
+                            <p> <!--Preço total dos itens--></p>
+                            <!-- Exibe a quantidade de cada item abaixo do preço -->
+                            <p class="item-quantidade"><!--Quantidade selecionados--></p>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="clear-cart" class="i">Limpar Carrinho</button>
+
+                <div class="cart-total">
+                    <button class="cart-btn-finalizar">
+                        finalizar-compra
+                    </button>
+                    <p>Total: R$ <span id="cart-total">0.00</span></p>
+                </div>
+            </div>
+        </section>
+
+    </header>
+
+    <main id="content">
+
+        <!--Seção de Apresentação-->
+        <section class="home active">
+            <!--Imagem de Onda-->
+            <div class="img-onda active">
+                <img src="imagens/Ondas/wave 5.svg" alt="" id="img-home">
+            </div>
+
+            <!--Conteúdo da Seção-->
+            <div id="conteiner_home">
+                <!--Descrição do Conteúdo-->
+                <div class="contexto">
+                    <!--Parte escrita da seção-->
+                    <h2 class="section-title">
+                        Inicio
+                    </h2>
+                    <h2 class="titulo-inicio">
+                        O Melhor<span>do Intervalo.</span>
+                    </h2>
+                    <p class="text-inicio">
+                        Descubra o sabor irresistível do melhor bolo no pote do Big Center e mergulhe na doce trajetória
+                        da KiSensacional, onde cada pedaço contém uma história de carinho e tradição.
+                    </p>
+                    <!--Parte escrita da seção-->
+
+                    <!--Botão de Destaque-->
+                    <div id="box_button_inicio">
+                        <button class="border-button-inicio">
+                            Ver Cardapio
+                            <a href="">
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </a>
+                        </button>
+                    </div>
+                    <!--Botão de Destaque-->
+
+                    <!--Botão de Destaque-->
+                    <div class="icons-inicio">
+                        <a href="https://www.instagram.com/ki_sensacional/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@ki.sensacional?is_from_webapp=1&sender_device=pc">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                    <!--Botão de Destaque-->
+                </div>
+                <!--Descrição do Conteúdo-->
+
+                <!--Slide da Seção-->
+                <div class="slider">
+
+                    <div class="slides">
+                        <!--Radio Bottom-->
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <!--Fim radio buttom-->
+
+                        <!--Slides Imagens-->
+                        <div class="slide first">
+                            <img src="./imagens/propagandas/variedades de sabores (1).png" alt="" id="img_auto1">
+                        </div>
+                        <div class="slide">
+                            <img src="./imagens/propagandas/propaganda slide.png" alt="" id="img_auto2">
+                        </div>
+                        <div class="slide">
+                            <img src="./imagens/propagandas/3 (1).png" alt="" id="img_auto3">
+                        </div>
+                        <div class="slide">
+                            <img src="./imagens/propagandas/4.png" alt="" id="img_auto4">
+                        </div>
+                    </div>
+                    <!--Navigation auto-->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                    <div class="manual-navigations">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+                    <!--Navigation auto-->
+
+                </div>
+                <!--Slide da Seção-->
+            </div>
+
+        </section>
+
+        <!--Seção do Cardapio-->
+        <section class="menu active">
+            <h2 class="section-title">Cardapio</h2>
+            <h5 class="section-subtitle">Nossos pratos especiais</h5>
+
+            <!--Conteúdo da Seção-->
+            <div id="dishes">
+
+                <!--Divisão de cada produto-->
+                <div class="dish">
+                    <div class="div-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="./imagens/propagandas/bolo menu.png" alt="" class="dish-img">
+
+                    <h3 class="dish-title">
+                        Bolos no Pote
+                    </h3>
+
+                    <span class="dish-description">
+                        Delicie-se com o nosso bolo no pote! Camadas cremosas e saborosas, feitas com ingredientes frescos e de qualidade. Disponível em diversos sabores: chocolate, Ninho, Prestígio e mais!
+                        Peça o seu e experimente essa delícia
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$7,49</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <div class="div-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="./imagens/propagandas/BRIGADEIRO MENU.png" alt="" class="dish-img">
+
+                    <h3 class="dish-title">
+                        Brigadeiros
+                    </h3>
+
+                    <span class="dish-description">
+                        Experimente o nosso brigadeiro! Feito com leite condensado de qualidade e aquele sabor irresistível de infância. Perfeito para adoçar qualquer momento! Com direito a decoração personalizada Peça o seu e saboreie essa delícia! 📲
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$10,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="dish">
+                    <div class="div-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="./imagens/propagandas/picole menu.png" alt="" class="dish-img">
+
+                    <h3 class="dish-title">
+                        Picolés 
+                    </h3>
+
+                    <span class="dish-description">
+                        Refresque-se com o nosso picolé de bolo! Uma mistura perfeita de bolo fofinho e cobertura cremosa, tudo em um picolé delicioso. Ideal para qualquer momento do dia!
+                        Peça o seu e se surpreenda com esse sabor! 🍦
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$5,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="dish">
+                    <div class="div-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="./imagens/propagandas/cone trufado.png" alt="" class="dish-img">
+
+                    <h3 class="dish-title">
+                        Cone de Chocolate
+                    </h3>
+
+                    <span class="dish-description">
+                        Delicie-se com nosso cone de chocolate! Crocante por fora e recheado com um chocolate cremoso e irresistível por dentro. A combinação perfeita para quem ama chocolate!
+                        Peça o seu e saboreie essa explosão de sabor! 🍫
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>R$7,00</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!--Divisão de cada produto-->
+
+            </div>
+            <!--Conteúdo da Seção-->
+
+        </section>
+
+        <!--Seção de Feedback-->
+        <section class="testimonials active">
+            <!--Coteúdo da Seção-->
+            <div id="testimonials_content">
+
+                <!--Titulos da Seção-->
+                <div class="title-main">
+                    <h2 class="section-title">
+                        Feedback
+                    </h2>
+                    <h3 class="section-subtitle">
+                        O que os clientes falam sobre nós
+                    </h3>
+
+                </div>
+                <!--Titulos da Seção-->
+
+                <!--Conteiner do Conteúdo-->
+                <div class="tudo">
+                    <!--Conteiner da imagem-->
+                    <div id="testimonials_chef">
+                        <img src="./imagens/avatares/chef3.png" alt="" class="img-chef">
+                    </div>
+
+                    <!--Conteúdo dos Feedbacks-->
+                    <div class="caixa">
+
+                        <div id="feedbacks">
+                            <div class="feedback">
+                                <img src="./imagens/avatares/avatar.png" class="feedback-avatar" alt="">
+
+                                <div class="feedback-content">
+                                    <p class="nome-cliente">
+                                        Julinha
+                                        <span>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>
+
+                                    </p>
+                                    <p>
+                                        A qualidade dos doces é impressionante, sempre com um sabor incrível! O atendimento é excelente, com uma equipe super atenciosa.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="feedbacks">
+                            <div class="feedback">
+                                <img src="./imagens/avatares/avatar.png" class="feedback-avatar" alt="">
+
+                                <div class="feedback-content">
+                                    <p class="nome-cliente">
+                                        Vovó lurdes
+                                        <span>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>
+
+                                    </p>
+                                    <p>
+                                        "Cada produto é feito com muito carinho, e é possível perceber o cuidado em cada detalhe. Parabens pela qualidade do serviço
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="feedbacks">
+                            <div class="feedback">
+                                <img src="./imagens/avatares/avatar.png" class="feedback-avatar" alt="">
+
+                                <div class="feedback-content">
+                                    <p class="nome-cliente">
+                                        Dona Marcia
+                                        <span>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>
+
+                                    </p>
+                                    <p>
+                                        Sem dúvida, é a melhor loja de doces da região! Voltarei sempre e recomendo a todos. Ki Sensacional os melhores
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="feedbacks">
+                            <div class="feedback">
+                                <img src="./imagens/avatares/avatar.png" class="feedback-avatar" alt="">
+
+                                <div class="feedback-content">
+                                    <p class="nome-cliente">
+                                        Cristiane
+                                        <span>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>
+
+                                    </p>
+                                    <p>
+                                        Fui surpreendido pela qualidade e variedade dos doces! Tudo é preparado com muito capricho, e o sabor é  maravilhoso.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Botão para ver mais-->
+                        <div id="box_button">
+                            <button class="border-animate-button">
+                                Ver mais avaliações
+                                <a href="">
+                                    <i class="fa-solid fa-arrow-down"></i>
+                                </a>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!--Coteúdo da Seção-->
+        </section>
+
+        <!--Seção de compras-->
+        <section class="compras">
+
+            <!--Topo da seção-->
+            <nav class="compras-top">
+                <button id="close-expanded">
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+
+                </button>
+                <h1>Compras</h1>
+            </nav>
+
+            <!--Icones para navegação-->
+            <nav class="nav-icones-compras">
+                <div id="icons-compras">
+                    <a href="">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-solid fa-ice-cream"></i>
+                    </a>
+                    <a href="" id="cockie">
+                        <i class="fa-solid fa-cookie-bite"></i>
+                    </a>
+                </div>
+
+
+            </nav>
+
+            <!--Seção dos Produtos-->
+            <nav class="cardapio-compras">
+                <!--Conteiner de cada tipo de produtos-->
+                <div class="content-compras">
+                    <h1>Mais vendidos</h1>
+                    <div class="dishes-compras">
+                        <!-- Produto Exemplo -->
+                        <div class="dish-compra" onclick="openProduct(this)" data-name="Bolo de Prestígio"
+                            data-price="7,00" data-weight="200g" data-image="./imagens/produtos/bolo prestigio.webp">
+                            <img src="./imagens/produtos/bolo prestigio.webp" alt="">
+                            <h2>Bolo de Prestígio <span id="gramas">200g</span></h2>
+                            <p><span><s>R$ 9,99</s></span> R$ 7,00</p>
+                        </div>
+
+                        <div class="dish-compra" onclick="openProduct(this)" data-name="Bolo de Chocolate"
+                            data-price="8.00" data-weight="200g" data-image="./imagens/produtos/bolo chocolate.webp">
+                            <img src="./imagens/produtos/bolo chocolate.webp" alt="">
+                            <h2>Bolo de Chocolate <span id="gramas">200g</span></h2>
+                            <p><span><s>R$ 12,00</s></span> R$ 8,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-compras">
+                    <h1>Bolos no pote - <span id="titulos_g">200g</span></h1>
+                    <!--Conteiner com cada produto específico-->
+                    <div class="dishes-compras">
+                        <div class="dish-compra" onclick="openProduct(this)" data-name="Bolo de Chocolate"
+                            data-price="8.00" data-weight="200g" data-image="./imagens/produtos/bolo chocolate.webp">
+                            <img src="./imagens/produtos/bolo chocolate.webp" alt="">
+                            <h2>Bolo de Chocolate <span id="gramas">200g</span></h2>
+                            <p><span><s>R$ 12,00</s></span> R$ 8,00</p>
+                        </div>
+                        
+
+                        <div class="dish-compra" onclick="openProduct(this)" data-name="Bolo Mesclado"
+                            data-price="8.00" data-weight="200g" data-image="./imagens/produtos/bolo chocolate.webp">
+                            <img src="./imagens/produtos/Mesclado.webp" alt="">
+                            <h2>Bolo Mesclado<span id="gramas">200g</span></h2>
+                            <p><span><s>R$ 12,00</s></span> R$ 8,00</p>
+                        </div>
+                        
+
+                        <div class="dish-compra" onclick="openProduct(this)" data-name="Bolo Ninho"
+                            data-price="8.00" data-weight="200g" data-image="./imagens/produtos/bolo vermelho.webp">
+                            <img src="./imagens/produtos/bolo vermelho.webp" alt="">
+                            <h2>Bolo Ninho<span id="gramas">200g</span></h2>
+                            <p><span><s>R$ 12,00</s></span> R$ 8,00</p>
+                        </div>
+                        
+                    
+                        <div class="dish-compra" onclick="openProduct(this)" data-name="Bolo Maracujá"
+                            data-price="9.00" data-weight="200g" data-image="./imagens/produtos/bolo-pote-maracuja-02.jpg">
+                            <img src="./imagens/produtos/bolo-pote-maracuja-02.jpg" alt="">
+                            <h2>Bolo Maracujá<span id="gramas">200g</span></h2>
+                            <p><span><s>R$ 12,00</s></span> R$ 9,00</p>
+                        </div>
+
+                    
+                        <div class="dish-compra" onclick="openProduct(this)" data-name="Bolo Maracujá"
+                            data-price="8.50" data-weight="200g" data-image="./imagens/produtos/bolo limão.jpg">
+                            <img src="./imagens/produtos/bolo limão.jpg" alt="">
+                            <h2>Bolo Limão<span id="gramas">200g</span></h2>
+                            <p><span><s>R$ 12,00</s></span> R$ 8,50</p>
+                        </div>
+
+                    
+                        <div class="dish-compra" onclick="openProduct(this)" data-name="Bolo Prestigio"
+                            data-price="8.00" data-weight="200g" data-image="./imagens/produtos/bolo prestigio.webp">
+                            <img src="./imagens/produtos/bolo prestigio.webp" alt="">
+                            <h2>Bolo Prestígio<span id="gramas">200g</span></h2>
+                            <p><span><s>R$ 12,00</s></span> R$ 8,00</p>
+                        </div>
+
+                        <div id="button_compras">
+                            <button class="button-compra">
+                                <a href="">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="content-compras">
+                    <h1>Brigadeiros - <span id="titulos_g">25g / 40g</span></h1>
+                    <!--Conteiner com cada produto específico-->
+                    <div class="dishes-compras">
+
+                
+                        <div class="dish-compra" onclick="openProduct(this)" data-name="Brigadeiro. Chocolate"
+                                data-price="3.00" data-weight="20g" data-image="./imagens/produtos/brigadeiro chocolate.jpg">
+                                <img src="./imagens/produtos/brigadeiro chocolate.jpg" alt="">
+                                <h2>Chocolate <span id="gramas">20g</span></h2>
+                                <p><span><s>R$ 5,00</s></span> R$ 3,00</p>
+                        </div>
+                            
+                        <div class="dish-compra" onclick="openProduct(this)" data-name="B. Ninho"
+                                data-price="3.00" data-weight="20g" data-image="./imagens/produtos/brigadeirobranco.webp">
+                                <img src="./imagens/produtos/brigadeirobranco.webp" alt="">
+                                <h2>Brigadeiro Branco<span id="gramas">20g</span></h2>
+                                <p><span><s>R$ 5,00</s></span> R$ 3,00</p>
+                        </div>
+                            
+                        <div class="dish-compra" onclick="openProduct(this)" data-name="B. F. rocher"
+                                data-price="3.50" data-weight="20g" data-image="./imagens/produtos/brigadeiro ferrero reocher.jfif">
+                                <img src="./imagens/produtos/brigadeiro ferrero reocher.jfif" alt="">
+                                <h2>B. Ferrero rocher<span id="gramas">20g</span></h2>
+                                <p><span><s>R$ 5,00</s></span> R$ 3,50</p>
+                        </div>
+                            
+                        <div class="dish-compra" onclick="openProduct(this)" data-name="B. Morango"
+                                data-price="4.00" data-weight="20g" data-image="./imagens/produtos/bombom-de-morango.webp">
+                                <img src="./imagens/produtos/bombom-de-morango.webp" alt="">
+                                <h2>B. morango<span id="gramas">40g</span></h2>
+                                <p><span><s>R$ 12,00</s></span> R$ 4,00</p>
+                        </div>
+                        
+                        <div class="dish-compra" onclick="openProduct(this)" data-name="Casadinho"
+                                data-price="3.00" data-weight="20g" data-image="./imagens/produtos/brigadeiro casadinho.png">
+                                <img src="./imagens/produtos/brigadeiro casadinho.png" alt="">
+                                <h2>Casadinho<span id="gramas">20g</span></h2>
+                                <p><span><s>R$ 5,00</s></span> R$ 3,00</p>
+                        </div>
+
+
+                        <div id="button_compras">
+                            <button class="button-compra">
+                                <a href="">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="content-compras">
+                    <h1>Picoles - <span id="titulos_g">80g / 120g</span></h1>
+                    <!--Conteiner com cada produto específico-->
+                    <div class="dishes-compras">
+
+                        <div class="dish-compra" onclick="openProduct(this)" data-name="Picole Cenoura"
+                                data-price="6.00" data-weight="150g" data-image="./imagens/produtos/picole cenoura.jpg">
+                                <img src="./imagens/produtos/picole cenoura.jpg" alt="">
+                                <h2>P. Cenoura<span id="gramas">150g</span></h2>
+                                <p><span><s>R$ 8,00</s></span> R$ 6,00</p>
+                        </div>
+                            
+                        <div class="dish-compra" onclick="openProduct(this)" data-name="Picole Prestigio"
+                                data-price="6.00" data-weight="150g" data-image="./imagens/produtos/picoles.webp">
+                                <img src="./imagens/produtos/picoles.webp" alt="">
+                                <h2>P. Prestigio<span id="gramas">150g</span></h2>
+                                <p><span><s>R$ 8,00</s></span> R$ 6,00<p>
+                        </div>
+                            
+                        <div class="dish-compra" onclick="openProduct(this)" data-name="Cone Trufado"
+                                data-price="7.00" data-weight="150g" data-image="./imagens/produtos/cone-trufado.jpg">
+                                <img src="./imagens/produtos/cone-trufado.jpg" alt="">
+                                <h2>C. trufado<span id="gramas">150g</span></h2>
+                                <p><span><s>R$ 12,00</s></span> R$ 7,00</p>
+                        </div>
+                        
+                        <div class="dish-compra" onclick="openProduct(this)" data-name="Cone Ferrero Rocher"
+                                data-price="7.00" data-weight="150g" data-image="./imagens/produtos/brigadeiro casadinho.png">
+                                <img src="./imagens/produtos/cones de ferrero.jpg" alt="">
+                                <h2>C. Ferrero rocher<span id="gramas">150g</span></h2>
+                                <p><span><s>R$ 12,00</s></span> R$ 7,00</p>
+                        </div>
+                        <div class="dish-compra" onclick="openProduct(this)" data-name="Cone Chocolate"
+                                data-price="7.00" data-weight="150g" data-image="./imagens/produtos/brigadeiro casadinho.png">
+                                <img src="./imagens/produtos/cones chocolate.jpg" alt="">
+                                <h2>Cone Chocolate<span id="gramas">150g</span></h2>
+                                <p><span><s>R$ 12,00</s></span> R$ 7,00</p>
+                        </div>
+
+                        <div id="button_compras">
+                            <button class="button-compra">
+                                <a href="">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="content-compras-mobile">
+                    <h1>Bolos mobile - <span id="titulos_g">200g</span></h1>
+                    <!--Conteiner com cada produto específico-->
+                    <div class="dish-compra-mobile" onclick="openProduct(this)" data-name="Bolo de Prestígio"
+                        data-price="7,00" data-weight="200g" data-image="./imagens/bolo prestigio.webp">
+                        <img src="./imagens/bolo prestigio.webp" alt="">
+                        <h2>Bolo de Prestígio <span id="gramas">200g</span></h2>
+                        <p><span><s>R$ 9,99</s></span> R$ 7,00</p>
+                    </div>
+                </div>
+
+            </nav>
+
+            <nav class="cardapio-compras-mobile">
+                <!--Conteiner de cada tipo de produtos-->
+                <div class="content-compras-mobile">
+                    <h1>Bolos no pote - <span id="titulos_g">200g</span></h1>
+                    <!--Conteiner com cada produto específico-->
+                    <div class="dishes-compras-mobile">
+                        <div class="dish-compra-mobile">
+                            <img src="./imagens/bolo chocolate.webp" alt="">
+                            <h2>Bolo de Chocolate <span id="gramas-mobile">200g</span></h2>
+                            <p><span><s>R$ 9,99</s></span> R$ 7,00</p>
+                        </div>
+                        <div class="dish-compra-mobile">
+                            <img src="./imagens/bolo chocolate.webp" alt="">
+                            <h2>Bolo de Chocolate <span id="gramas-mobile">200g</span></h2>
+                            <p><span><s>R$ 9,99</s></span> R$ 7,00</p>
+                        </div>
+                        <div class="dish-compra-mobile">
+                            <img src="./imagens/bolo chocolate.webp" alt="">
+                            <h2>Bolo de Chocolate <span id="gramas-mobile">200g</span></h2>
+                            <p><span><s>R$ 9,99</s></span> R$ 7,00</p>
+                        </div>
+                        <div class="dish-compra-mobile">
+                            <img src="./imagens/bolo chocolate.webp" alt="">
+                            <h2>Bolo de Chocolate <span id="gramas-mobile">200g</span></h2>
+                            <p><span><s>R$ 9,99</s></span> R$ 7,00</p>
+                        </div>
+                        <div class="dish-compra-mobile">
+                            <img src="./imagens/bolo chocolate.webp" alt="">
+                            <h2>Bolo de Chocolate <span id="gramas-mobile">200g</span></h2>
+                            <p><span><s>R$ 9,99</s></span> R$ 7,00</p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </nav>
+
+            <nav class="produto-aberto">
+
+                <div class="conteudo-produto">
+                    <div class="img-produto-conteiner">
+                        <img src="./imagens/bolo vermelho.webp" alt="">
+                    </div>
+                    <div class="contexo-produto">
+                        <h1>Bolo de Nutella</h1>
+                        <h2 class="preços-subtitle"><span><s>R$ 9,99</s></span> R$ 7,00 <span
+                                id="produto_gramas">200g</span></h2>
+                        <p> "Transforme qualquer momento em uma experiência deliciosa com os nossos produtos! todos são feitos com ingredientes frescos e de qualidade, para garantir o sabor irresistível que você merece. 😋"</p>
+                    </div>
+                </div>
+
+                <div class="complemento-produto">
+                    <h1>Complementos</h1>
+                    <div class="complemento-brigadeiro">
+                        <div class="conteudo-complemento">
+
+                            <div class="comp">
+                                <img src="./imagens/produtos/brigadeiro ferrero reocher.jfif" alt="">
+                                <h2>B. Ferrero Rocher</h2>
+                            </div>
+
+                            <p><span>15g</span> R$ 3,80</p>
+
+                            <div class="button-produto">
+                                <button class="buttom-adicionar-complemento" data-preco="3.80" data-name="B. rocher">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="complemento-brigadeiro">
+                        <div class="conteudo-complemento">
+                            <div class="comp">
+                                <img src="./imagens/produtos/brigadeiro chocolate.jpg" alt="">
+                                <h2>B. Chocolate</h2>
+                            </div>
+                            <p><span>15g</span> R$ 2,50</p>
+                            <div class="button-produto">
+                                <button class="buttom-adicionar-complemento" data-preco="2.50" data-name="B. Chocolate">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="complemento-brigadeiro">
+                        <div class="conteudo-complemento">
+                            <div class="comp">
+                                <img src="./imagens/produtos/brigadeirobranco.webp" alt="">
+                                <h2>B. ninho</h2>
+                            </div>
+                            <p><span>15g</span> R$ 2,80</p>
+                            <div class="button-produto">
+                                <button class="buttom-adicionar-complemento" data-preco="1.70" data-name="B. Casadinho">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Finalizar Compra -->
+                <div class="finalizar-compra">
+                    <div class="buttons-adicionar">
+                        <button id="plus">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <p id="quantity">1</p>
+                        <button id="less">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+
+                    <div class="valor-finalizar">
+                        <button class="avançar" id="finalizarCompra" data-name="Bolo de Nutella" data-price="7,00"
+                            data-weight="200g" data-image="./imagens/bolo vermelho.webp">
+                            <p>Adicionar</p>
+                        </button>
+                        <p id="total">Total: R$ 7,00</p>
+                    </div>
+                </div>
+
+
+            </nav>
+        </section>
+
+        <section class="beneficios">
+            <!--Topo da Seção-->
+            <nav class="Beneficos-top">
+                <a href="">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <h1>Benefícios</h1>
+            </nav>
+
+            <!--Rolamento de icones-->
+            <nav class="icons-beneficios">
+                <div id="icons-beneficios">
+                    <a href="">
+                        <i class="fa-solid fa-handshake"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-solid fa-award"></i>
+                    </a>
+                </div>
+
+            </nav>
+
+            <nav class="Beneficios-nav">
+                <h1>Cliente do Mês</h1>
+                <div class="premio">
+                    <div class="img-premio">
+                        <img src="./imagens/fidelidade/premio.webp" alt="" id="img-p">
+                    </div>
+                    <button class="button-premio">
+                        Resgatar Prêmio
+                    </button>
+                </div>
+                <h1>Regras para participar</h1>
+                <div class="txt-regras">
+                    <div class="texto1">
+                        <a href="">
+                            <i class="fa-solid fa-trophy"></i>
+                        </a>
+                        <p>Para participar da nossa promoção "Cliente do Mês", basta ser o melhor cliente da nossa marca no mês! Como? Simples: compre em nosso site e aproveite as delícias que preparamos para você. Quanto mais você compra, mais chances tem de ser o grande vencedor! Não perca a chance de ganhar prêmios exclusivos e ser reconhecido por sua fidelidade! 🏆 </p>
+
+                    </div>
+
+                    <div class="texto1">
+                        <a href=""><i class="fa-solid fa-circle-exclamation"></i></a>
+                        <p>Atenção! Para participar da promoção "Cliente do Mês", os pontos serão contabilizados apenas para compras realizadas via cartão ou Pix no nosso site. Lembre-se, você estará concorrendo com outros clientes que também fazem compras online!</p>
+                    </div>
+
+                </div>
+            </nav>
+
+            <nav class="fidelidade">
+                <h1>Cartão Fidelidade</h1>
+                <div class="fidelidade-premio">
+                    <img src="./imagens/Logomarca/logotipos.png" alt="" id="trans">
+                    <div class="conteiner-img-fiel">
+                        <div class="cima">
+                            <img src="./imagens/Logomarca/logotipos.png" alt="">
+                            <img src="./imagens/Logomarca/logotipos.png" alt="">
+                            <img src="./imagens/Logomarca/logotipos.png" alt="">
+                            <img src="./imagens/Logomarca/logotipos.png" alt="">
+                            <img src="./imagens/Logomarca/logotipos.png" alt="">
+
+                        </div>
+                        <div class="cima">
+                            <img src="./imagens/Logomarca/logotipos.png" alt="">
+                            <img src="./imagens/Logomarca/logotipos.png" alt="">
+                            <img src="./imagens/Logomarca/logotipos.png" alt="">
+                            <img src="./imagens/Logomarca/logotipos.png" alt="">
+                            <img src="./imagens/Logomarca/logotipos.png" alt="">
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="conteiner-fiel">
+                        <div class="img-fidelidade">
+                            <div class="barra-contagem">
+                                <div class="cont" id="barra"></div> <!-- Barra de contagem -->
+                            </div>
+                            <div class="contagem">
+                                <p><span id="quantidade">0</span>/10</p> <!-- Contagem de pontos -->
+                            </div>
+                        </div>
+
+                        <div class="fiel-button">
+                            <button class="button-fidelidade" id="resgatar">
+                                Resgatar Prêmio
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <h1>Regras para participar</h1>
+                <div class="txt-regras">
+                    <div class="texto1">
+                        <a href="">
+                            <i class="fa-solid fa-trophy"></i>
+                        </a>
+                        <p>Para participar, é simples: basta comprar nossos produtos online! A cada 10 produtos comprados, você estará garantido para ganhar o **prêmio exclusivo** da promoção. Quanto mais você compra, mais chances tem de ganhar! Não perca essa oportunidade de ser premiado! 🏆</p>
+                    </div>
+
+                    <div class="texto1">
+                        <a href=""><i class="fa-solid fa-circle-exclamation"></i></a>
+                        <p>Ao resgatar, você tem direito a qualquer produto da loja com 100% de desconto! Isso mesmo, escolha o que mais desejar e aproveite a nossa promoção imperdível.Não perca a chance de garantir o seu prêmio e saborear nossos produtos com um super desconto!</p>
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+        <section class="perfil_da_loja">
+            <nav class="loja-top">
+                <a href="">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <h1>Perfil da Loja</h1>
+            </nav>
+
+            <div class="conteiner-atendimento">
+                <div class="atendimento">
+                    <div class="title-atendimento">
+                        <i class="fa-solid fa-shop"></i>
+                        <h1>Atendimento</h1>
+                    </div>
+                    <p>Segunda: <span>8h às 18h</span></p>
+                    <p>Terça-feira: <span>8h às 18h</span></p>
+                    <p>Quarta-feira: <span>8h às 18h</span></p>
+                    <p>Quinta-feira: <span>8h às 18h</span></p>
+                    <p>Sexta-feira: <span>8h às 18h</span></p>
+                </div>
+
+                <div class="atendimento">
+                    <div class="title-atendimento">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                        <h1>Formas de Pagamento</h1>
+                    </div>
+                    <div class="icons-pagamento">
+                        <a href="" id="pix">
+                            <i class="fa-brands fa-pix"></i>
+                        </a>
+                        <p> Pix</p>
+                    </div>
+                    <div class="icons-pagamento">
+                        <a href="" id="money">
+                            <i class="fa-solid fa-money-bill"></i>
+                        </a>
+                        <p> Pix</p>
+                    </div>
+                    <div class="icons-pagamento">
+                        <a href="" id="card">
+                            <i class="fa-solid fa-credit-card"></i>
+                        </a>
+                        <p>Cartão: MasterCard, Visa, PicPay</p>
+                    </div>
+
+
+                </div>
+
+                <div class="fundo"></div>
+
+
+
+            </div>
+
+
+        </section>
+
+        <section class="login">
+            <div class="logo-center">
+                <img src="./imagens/logotipos.png" alt="" width="90px">
+            </div>
+            <div class="login-container">
+                <h2>Login</h2>
+                <form>
+                    <input type="text" placeholder="Usuário" required>
+                    <input type="password" placeholder="Senha" required>
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <!--Rodapé da Página-->
+        <div id="footer_items">
+            <!--Icones do rodapé-->
+            <div class="social-media-buttons">
+
+                <button class="home-btn">
+                    <a href="#">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </button>
+
+                <button class="compras-btn">
+                    <a href="#">
+                        <i class="fa-solid fa-shopping-cart"></i>
+                    </a>
+                </button>
+                <button class="beneficios-btn">
+                    <a href="#">
+                        <i class="fa-solid fa-cogs"></i>
+                    </a>
+                </button>
+                <button class="login-btn">
+                    <a href="#">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </button>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+
+<script src="./javascript/script.js"></script>
+
+</html>

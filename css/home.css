@@ -1,0 +1,432 @@
+/*Estilização Conteúdo todo*/
+.home {
+    margin: 0;
+   
+}
+#conteiner_home {
+    display: flex;
+    flex-direction: row; /*Alinha os itens um ao lado do outro*/
+    gap: 5%; /*Espaço entre itens*/
+    margin: 0 8%;
+}
+
+/*Titulo da Seção*/
+.titulo-inicio {
+    display: flex;
+    text-align: left; /*Alinha o texto a esquerda*/
+    font-size: 35px; /*Tamanho do texto*/
+    color: #e9a209; /*Cor do texto*/  
+    gap: 20px;
+}
+
+/*Estilização para animação do texto*/
+.titulo-inicio span {
+    display: flex;
+    font-weight: 900;
+    border-right: 3px solid black;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 10px;
+    animation: mark .5s step-end infinite, write 8s steps(22, end) infinite;
+    
+}
+
+/*Animação do span*/
+@keyframes mark {
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes write {
+    20% {
+        width: 10ch;
+    }
+
+    70%{
+        width: 10ch;
+    }
+
+    85%{
+        width: 0;
+    }
+    100%{
+        width: 0;
+    }
+}
+
+/*Paragrafo de apresentação*/
+.text-inicio {
+    font-size: 1.5rem; /*tamanho do texto*/
+    text-align: justify; /*Justifica o texto*/
+}
+
+/*Caixa que contém o conteúdo escrito*/
+.contexto {
+    width: 50%; /*Ocupa metade da tela*/
+}
+
+/*Conteiner do Botão inicio*/
+#box_button_inicio {
+    width: 100%;
+    padding: 25px 0px;
+    display: flex;
+    justify-content: left; /*Justifica o botão a esquerda*/  
+}
+
+/*Estilização do botão*/
+.border-button-inicio {
+    width: 70%;
+    border: none; /*retira a borda*/
+    background-color: #ffcb45; /*Cor de fundo da botão*/
+    font-size: 18px; /*Tamanho do texto*/
+    border-radius: 12px; /*espessura da borda*/
+    padding: 8px; /*Espaço dento do botão*/
+    font-weight: bold; /*Negrito no texto*/
+    box-shadow: 0px 0px 10px 2px #00000067; /*Sombras ao redor do botão*/
+    cursor: pointer;
+    transition: color 0.4s;
+}
+
+/*Animação desse botão*/
+.border-button-inicio::before,
+.border-button-inicio::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000508;
+    border-radius: 12px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transform: scaleX(0); /* Começa invisível */
+    transition: transform 0.7s ease; /* Controle da animação */
+
+}
+
+.border-button-inicio:hover::before {
+    transform: scaleX(1); /* Anima horizontalmente primeiro */
+}
+  
+.border-button-inicio:hover::after {
+    transform: scaleY(1); /* Anima verticalmente após a primeira parte */
+}
+  
+.border-button-inicio {
+    position: relative;
+    z-index: 1; /* Mantém o texto acima das bordas animadas */
+}
+
+/*-------------------------------------*/
+
+/*Caixa dos icons*/
+.icons-inicio {
+    display: flex;
+    justify-content: left; /*alinha os botões a esquerda*/
+    gap: 18px; /*Espaçamento entre os botões*/
+   
+}
+
+/*Estilização dos icones (Redes Sociais)*/
+.icons-inicio a {
+    display: flex;
+    align-items: center; /*Alinha os itens vertical*/
+    justify-content: center; /*alinha os itens horizontal*/
+    width: 50px; /*Largura da caixa*/
+    height: 40px; /*Altura da caixa*/
+    font-size: 1.5rem; /*Tamanho do Icone*/
+    border-radius: 10px; /*Espessura da borda*/
+    text-decoration: none; /*Retira as linhas do botão*/
+    color: var(--color-neutral-1);; /*Cor de fundo*/
+    box-shadow: 0px 0px 12px 4px #0000008a; /*Sombreamento dos Botões*/
+    transition: box-shadow .3s ease; /*Animation*/
+}
+
+/*Animação nos icones do inicio*/
+.icons-inicio a:hover {
+    background-color: #ffcb45;
+    box-shadow: 10px  rgb(0, 0, 0);
+    transition: 0.5s;
+    transform: scale(1.10);
+}
+
+/*Onda no inicio da pagína*/
+.img-onda {
+    width: 100%; /*Máximo de largura na pagína*/
+    
+}
+
+/*Estilização dos Slides*/
+
+/*Conteiner dos Slides*/
+.slider {
+    background-color: rgb(0, 0, 0);
+    width: 50%; /*Ocupa metade da pagína*/
+    height: 400px; /*altura*/
+    overflow: hidden; /*Faz com que tudo que saia da caixa não apereça*/
+    border: 3px solid black; /*Borda*/
+    border-radius: 35px; /*Espessura da borda*/
+}
+
+/*Conteiner com conteúdo dos slides*/
+.slides {
+    height: 100%;
+    display: flex;
+    transition: margin-left 0.5s
+}
+
+.slides div {
+    height: 100%;
+    /*Pega todas as div com img*/
+
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    min-width: 100%;
+    min-height: 100%;
+    transition: 2s;
+    /*Tamanho minimo*/
+}
+
+/*Imagens dos Slides*/
+#img_auto1, #img_auto2, #img_auto3, #img_auto4 {
+    width: 100%;
+    height: 100%;
+
+    /*Pega todas as imagens e fazem elas se adptar ao tamnho da div*/
+}
+
+/*Estilização dos Botões da Seção*/
+.manual-navigations {
+    position: relative;
+    width: 100%;
+    bottom: 20px;
+    margin-top: -15px;
+    display: flex;
+    justify-content: center;
+}
+
+/*Botão Manual*/
+.manual-btn {
+    border: 3px solid #e9a209; /*Borda do botão*/
+    padding: 5px; /*tamanho*/
+    border-radius: 10px; /*Borda do botão*/
+    cursor: pointer;
+    transition: 0.5s; /*tempo da animação*/
+    z-index: 1;
+}
+
+/*Estiliza todos os btn menos o último*/
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+/*Efeito de animação*/
+.manual-btn:hover {
+    background-color: rgb(214, 169, 72);
+}
+
+/*Estilização dos Botão automatico*/
+.navigation-auto {
+    position: relative;
+    width: 100%;
+    bottom: 20px;
+    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto .auto-btn1,
+.auto-btn2, .auto-btn3, .auto-btn4 {
+    border: 3px solid #e9a209;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+
+}
+
+.auto-btn1:hover {
+    background-color: #f5a0aa;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+.navigation-auto .active {
+    background-color: #00ff000c;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -100%;
+    
+}
+
+#radio3:checked ~ .first {
+    margin-left: -200%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -300%;
+}
+
+@media (max-width: 1280px) {
+    .titulo-inicio {
+        font-size: 28px;
+    }
+
+    .text-inicio {
+        font-size: 1.2rem; /*tamanho do texto*/
+        text-align: justify; /*Justifica o texto*/
+    }
+    .icons-inicio a {
+        font-size: 1.2rem; /*Tamanho do Icone*/
+
+    }
+    #box_button_inicio {
+        width: 100%;
+        padding: 20px 0px;
+        display: flex;
+        justify-content: left; /*Justifica o botão a esquerda*/  
+    }
+    
+    /*Estilização do botão*/
+    .border-button-inicio {
+        font-size: 15px; /*Tamanho do texto*/
+
+    }
+
+
+    
+    
+}
+
+@media (max-width: 900px) {
+    #conteiner_home {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column; /*Alinha os itens um ao lado do outro*/
+    }
+    .contexto {
+        width: 100%; /*Ocupa metade da tela*/
+    }
+    .section-title {
+        text-align: center;
+    }
+    .titulo-inicio {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 35px; /*Tamanho do texto*/
+        gap: 5px;   
+     
+    }
+
+
+
+    .text-inicio {
+        font-size: 18px; /*tamanho do texto*/
+        text-align: center; /*Justifica o texto*/
+    }
+
+    #box_button_inicio {
+        width: 100%;
+        padding: 25px 0px;
+        display: flex;
+        justify-content: center; /*Justifica o botão a esquerda*/  
+    }
+    
+
+    .icons-inicio {
+        display: flex;
+        justify-content: center; /*alinha os botões a esquerda*/
+        gap: 18px; /*Espaçamento entre os botões*/
+       
+    }
+    
+
+
+
+    .slider {
+        background-color: rgb(0, 0, 0);
+        width: 100%; /*Ocupa metade da pagína*/
+        height: 280px; /*altura*/
+        overflow: hidden; /*Faz com que tudo que saia da caixa não apereça*/
+        border: 3px solid black; /*Borda*/
+        border-radius: 35px; /*Espessura da borda*/
+        margin-top: 20px;
+       
+    }
+
+
+
+
+    
+    
+}
+
+@media (max-width: 600px) {
+    #conteiner_home {
+        margin: 0;
+        display: flex;
+        flex-direction: column; /*Alinha os itens um ao lado do outro*/
+    }
+
+    .slider {
+        width: 100%; /*Ocupa metade da pagína*/
+        height: 200px; /*altura*/
+        margin-top: 20px;
+        border-radius: 0%;
+
+    }
+
+    .text-inicio {
+        margin: 0 8%;
+        text-align: justify;
+    }
+
+
+
+    .titulo-inicio {
+        font-size: 25px; /*Tamanho do texto*/
+        color: #e9a209; /*Cor do texto*/  
+
+    }
+    .manual-navigations {
+        bottom: 10px;
+        margin-top: -5px;
+    }
+    .manual-btn {
+        border: 2px solid #e9a209; /*Borda do botão*/
+        padding: 3px; /*tamanho*/
+    }
+    .navigation-auto .auto-btn1,
+    .auto-btn2, .auto-btn3, .auto-btn4 {
+    border: 2px solid #00000000;
+    padding: 3px;
+    top: 0;
+    
+
+}
+    
+
+
+    
+
+
+
+
+    
+    
+}
